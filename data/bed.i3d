@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="PickUp" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="8.2.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="10" filename="extras/Scripts/emissiveLightsShader.xml"/>
+    <File fileId="8" filename="extras/Textures/Black.dds"/>
+    <File fileId="12" filename="extras/Textures/Corona_White.dds"/>
+    <File fileId="4" filename="extras/Textures/Gray.dds"/>
+    <File fileId="17" filename="extras/Textures/InteriorWarningLights.dds"/>
+    <File fileId="7" filename="extras/Textures/Ripple_Glass.dds"/>
+    <File fileId="6" filename="extras/Textures/Silver.dds"/>
+    <File fileId="11" filename="extras/Textures/coronaWhite_diffuse.dds"/>
+    <File fileId="14" filename="extras/shared/emissiveLightsShader.xml"/>
+    <File fileId="13" filename="shaders/emissiveLightsShader.xml"/>
+    <File fileId="9" filename="shared/coronaOrange_diffuse.dds"/>
+    <File fileId="15" filename="shared/coronaRed_diffuse.png"/>
+    <File fileId="2" filename="textures/jsbradfordbeddually.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="chrome" materialId="9" specularColor="0.329412 1 0.329412">
+      <Texture fileId="6"/>
+    </Material>
+    <Material name="corona_tex" materialId="15" alphaBlending="true" customShaderId="10">
+      <Emissivemap fileId="11"/>
+    </Material>
+    <Material name="corona_tex" materialId="6" alphaBlending="true" customShaderId="10">
+      <Emissivemap fileId="9"/>
+    </Material>
+    <Material name="coronaOrange_mat" materialId="7" alphaBlending="true" customShaderId="13">
+      <Emissivemap fileId="9"/>
+    </Material>
+    <Material name="coronaRed_mat" materialId="13" alphaBlending="true" customShaderId="13">
+      <Emissivemap fileId="15"/>
+    </Material>
+    <Material name="coronaWhite_mat" materialId="11" alphaBlending="true" customShaderId="13">
+      <Emissivemap fileId="12"/>
+    </Material>
+    <Material name="coronaWhite_mat" materialId="12" alphaBlending="true" customShaderId="14">
+      <Emissivemap fileId="9"/>
+    </Material>
+    <Material name="Dunkelgrau" materialId="10" specularColor="0.329412 1 0.329412">
+      <Texture fileId="8"/>
+    </Material>
+    <Material name="Hellgrau" materialId="14" specularColor="0.329412 1 0.329412">
+      <Texture fileId="4"/>
+    </Material>
+    <Material name="jsbradforduallybed" materialId="16" specularColor="1 1 1">
+      <Texture fileId="2"/>
+    </Material>
+    <Material name="lambert1" materialId="8" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="Sputnik_nano_Glas" materialId="4" specularColor="0.329412 1 0.329412" alphaBlending="true">
+      <Texture fileId="7"/>
+    </Material>
+    <Material name="TurnIndicator" materialId="5" diffuseColor="0 0 0 1" alphaBlending="true" customShaderId="14">
+      <Emissivemap fileId="17"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="bed.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="col01" translation="1.09 0.593 -2.957" scale="0.13 1 0.56" compoundChild="true" collisionMask="2105410" density="0.14" clipDistance="300" nodeId="29" materialIds="8" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    <Shape shapeId="1" name="col01" translation="-1.09 0.593 -2.957" scale="0.13 1 0.56" compoundChild="true" collisionMask="2105410" density="0.14" clipDistance="300" nodeId="30" materialIds="8" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    <TransformGroup name="06crew" translation="0 0.146 0.18" scale="1.1 1.1 1.1" nodeId="31">
+      <Shape shapeId="2" name="jscablights.001_Circle.000" translation="0 0.833032 -2.918" nodeId="32" materialIds="16" castsShadows="true" receiveShadows="true"/>
+    </TransformGroup>
+    <TransformGroup name="tensionBelts" translation="0.979 0.969255 -2.343" nodeId="33">
+      <TransformGroup name="beltStart1" translation="-1.289e-08 0 0.174242" rotation="0 -90 0" nodeId="34">
+        <TransformGroup name="beltEnd1" translation="0 0 1.985" nodeId="35"/>
+      </TransformGroup>
+      <TransformGroup name="beltStart1" translation="6.10904e-08 0 -0.612278" rotation="0 -90 0" nodeId="36">
+        <TransformGroup name="beltEnd1" translation="0 0 1.985" nodeId="37"/>
+      </TransformGroup>
+      <TransformGroup name="beltStart1" translation="9.71614e-08 0 -1.43751" rotation="0 -90 0" nodeId="38">
+        <TransformGroup name="beltEnd1" translation="0 0 1.985" nodeId="39"/>
+      </TransformGroup>
+    </TransformGroup>
+    <Shape shapeId="1" name="col01" translation="0.869545 1.43572 -1.58399" rotation="0 -0 15.2323" scale="0.05 1.5 0.1" compoundChild="true" collisionMask="2105410" density="0.14" clipDistance="300" nodeId="40" materialIds="8" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    <Shape shapeId="1" name="col01" translation="-0.87 1.43572 -1.58399" rotation="0 -0 -15.232" scale="0.05 1.5 0.1" compoundChild="true" collisionMask="2105410" density="0.14" clipDistance="300" nodeId="41" materialIds="8" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    <Shape shapeId="1" name="col01" translation="0 1.81877 -1.57159" scale="0.7 0.2 0.1" compoundChild="true" collisionMask="2105410" density="0.14" clipDistance="300" nodeId="42" materialIds="8" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    <TransformGroup name="LEDs" nodeId="43">
+      <TransformGroup name="Grill " translation="0.465821 0.931626 2.36365" scale="0.7 0.8 0.8" nodeId="44">
+        <Shape shapeId="3" name="LED Housing" rotation="0 180 0" scale="0.7 0.7 0.7" nodeId="45" materialIds="14,9,4,10" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="transform" nodeId="46">
+          <TransformGroup name="transform" translation="0.00743321 -0.0097 0.032" nodeId="47">
+            <Shape shapeId="4" name="Orange" translation="-0.0532678 0.003 0" scale="0.5 0.5 0.1" nodeId="48" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="-0.0273653 0.003 0" scale="0.5 0.5 0.1" nodeId="49" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="0 0.003 0" scale="0.5 0.5 0.1" nodeId="50" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="0.0299138 0.003 0" scale="0.5 0.5 0.1" nodeId="51" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="Gril" translation="0.0825114 0.653523 2.36301" scale="0.7 0.8 0.8" nodeId="52">
+        <Shape shapeId="3" name="LED Housing" translation="-2.64411e-09 0 0" rotation="0 180 0" scale="0.7 0.7 0.7" nodeId="53" materialIds="14,9,4,10" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="transform" nodeId="54">
+          <TransformGroup name="transform" translation="0.00743321 -0.0097 0.032" nodeId="55">
+            <Shape shapeId="4" name="Orange" translation="-0.0532678 0.003 0" scale="0.5 0.5 0.1" nodeId="56" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="-0.0273653 0.003 0" scale="0.5 0.5 0.1" nodeId="57" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="0 0.003 0" scale="0.5 0.5 0.1" nodeId="58" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="0.0299138 0.003 0" scale="0.5 0.5 0.1" nodeId="59" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="Grill" translation="-0.04849 0.933736 2.37391" scale="0.7 0.8 0.8" nodeId="60">
+        <Shape shapeId="3" name="LED Housing" translation="-0.00939805 0 -0.00596378" rotation="-180 0 -180" scale="0.7 0.7 0.7" nodeId="61" materialIds="14,9,4,10" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="transform" nodeId="62">
+          <TransformGroup name="transform" translation="0.00743321 -0.0097 0.032" nodeId="63">
+            <Shape shapeId="4" name="Orange" translation="-0.0532678 0.003 0" scale="0.5 0.5 0.1" nodeId="64" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="-0.0273653 0.003 0" scale="0.5 0.5 0.1" nodeId="65" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="0 0.003 0" scale="0.5 0.5 0.1" nodeId="66" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="0.0299138 0.003 0" scale="0.5 0.5 0.1" nodeId="67" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="Grill" translation="-0.45325 0.659074 2.36237" scale="0.7 0.8 0.8" nodeId="68">
+        <Shape shapeId="3" name="LED Housing" translation="-2.64411e-09 0 0" rotation="0 180 0" scale="0.7 0.7 0.7" nodeId="69" materialIds="14,9,4,10" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="transform" nodeId="70">
+          <TransformGroup name="transform" translation="0.00743321 -0.0097 0.032" nodeId="71">
+            <Shape shapeId="4" name="Orange" translation="-0.0532678 0.003 0" scale="0.5 0.5 0.1" nodeId="72" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="-0.0273653 0.003 0" scale="0.5 0.5 0.1" nodeId="73" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="0 0.003 0" scale="0.5 0.5 0.1" nodeId="74" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="0.0299138 0.003 0" scale="0.5 0.5 0.1" nodeId="75" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="Orange LED" translation="0 1.22845 0.863322" rotation="180 180 180" scale="0.7 0.8 0.8" visibility="false" nodeId="76">
+        <Shape shapeId="3" name="LED Housing" translation="-2.64411e-09 0 0" rotation="0 180 0" scale="0.7 0.7 0.7" nodeId="77" materialIds="14,9,4,10" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="transform" nodeId="78">
+          <TransformGroup name="transform" translation="0.00743321 -0.0097 0.032" nodeId="79">
+            <Shape shapeId="4" name="Orange" translation="-0.0532678 0.003 0" scale="0.5 0.5 0.1" nodeId="80" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="-0.0273653 0.003 0" scale="0.5 0.5 0.1" nodeId="81" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="0 0.003 0" scale="0.5 0.5 0.1" nodeId="82" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="0.0299138 0.003 0" scale="0.5 0.5 0.1" nodeId="83" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="Orange LED TL" translation="0.384 1.815 -1.63" rotation="-180 0 0" scale="0.7 0.8 0.8" nodeId="84">
+        <Shape shapeId="3" name="LED Housing" translation="-2.64411e-09 -0.00646147 0" rotation="0 180 0" scale="0.7 0.7 0.7" nodeId="85" materialIds="14,9,4,10" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="transform" nodeId="86">
+          <TransformGroup name="transform" translation="0.00743321 -0.0097 0.032" nodeId="87">
+            <Shape shapeId="4" name="Orange" translation="-0.0532678 0.003 0" scale="0.5 0.5 0.1" nodeId="88" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="-0.0273653 0.003 0" scale="0.5 0.5 0.1" nodeId="89" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="0 0.003 0" scale="0.5 0.5 0.1" nodeId="90" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="0.0299138 0.003 0" scale="0.5 0.5 0.1" nodeId="91" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="Orange LED SR" translation="-0.868 1.577 -1.664" rotation="-180 -4.02 73.9089" scale="0.7 0.8 0.8" nodeId="92">
+        <Shape shapeId="3" name="LED Housing" translation="-2.64411e-09 0 0" rotation="0 180 0" scale="0.7 0.7 0.7" nodeId="93" materialIds="14,9,4,10" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="transform" nodeId="94">
+          <TransformGroup name="transform" translation="0.0157628 -0.00476615 0.032" nodeId="95">
+            <Shape shapeId="4" name="Orange" translation="-0.0179997 0.0105155 -5.65518e-07" rotation="-0.000913965 -7.44384e-05 -94.1355" scale="0.4 0.4 0.1" nodeId="96" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="-0.0273653 0.003 0" scale="0.3 0.3 0.1" nodeId="97" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="6.20339e-05 0.003 0" scale="0.3 0.3 0.1" nodeId="98" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="0.0299138 0.003 0" scale="0.3 0.3 0.1" nodeId="99" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="Orange LED RR" translation="-0.427 0.649 -4.22796" rotation="-180 0 67.8009" scale="0.7 0.8 0.8" nodeId="100">
+        <Shape shapeId="3" name="LED Housing" translation="-2.64411e-09 0 0" rotation="0 180 0" scale="0.7 0.7 0.7" nodeId="101" materialIds="14,9,4,10" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="transform" nodeId="102">
+          <TransformGroup name="transform" translation="0.00743321 -0.0097 0.032" nodeId="103">
+            <Shape shapeId="4" name="Orange" translation="-0.0532678 0.003 0" scale="0.5 0.5 0.1" nodeId="104" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="-0.0273653 0.003 0" scale="0.5 0.5 0.1" nodeId="105" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="0 0.003 0" scale="0.5 0.5 0.1" nodeId="106" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="Orange" translation="0.0299138 0.003 0" scale="0.5 0.5 0.1" nodeId="107" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="RL" translation="0.427 0.649 -4.22514" rotation="-180 0 -67.7778" scale="0.7 0.8 0.8" nodeId="108">
+        <Shape shapeId="3" name="LED Housing RL" translation="-2.64411e-09 0 0" rotation="0 180 0" scale="0.7 0.7 0.7" nodeId="109" materialIds="14,9,4,10" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="transform" nodeId="110">
+          <TransformGroup name="transform" translation="0.00743321 -0.0097 0.032" nodeId="111">
+            <Shape shapeId="4" name="White" translation="-0.0532678 0.003 0" scale="0.4 0.4 0.1" nodeId="112" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="-0.0273653 0.003 0" scale="0.4 0.4 0.1" nodeId="113" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="0 0.003 0" scale="0.4 0.4 0.1" nodeId="114" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="0.0299138 0.003 0" scale="0.4 0.4 0.1" nodeId="115" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="Grill" translation="-0.0560673 0.656417 2.36979" scale="0.7 0.8 0.8" nodeId="116">
+        <Shape shapeId="3" name="LED Housing" translation="-2.64411e-09 0 0" rotation="0 180 0" scale="0.7 0.7 0.7" nodeId="117" materialIds="14,9,4,10" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="transform" nodeId="118">
+          <TransformGroup name="transform" translation="0.00743321 -0.0097 0.032" nodeId="119">
+            <Shape shapeId="4" name="White" translation="-0.0532678 0.003 0" scale="0.4 0.4 0.1" nodeId="120" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="-0.0273653 0.003 0" scale="0.4 0.4 0.1" nodeId="121" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="0 0.003 0" scale="0.4 0.4 0.1" nodeId="122" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="0.0299138 0.003 0" scale="0.4 0.4 0.1" nodeId="123" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="Grill" translation="0.0799341 0.932962 2.35545" scale="0.7 0.8 0.8" nodeId="124">
+        <Shape shapeId="3" name="LED Housing" translation="-2.64411e-09 0 0" rotation="0 180 0" scale="0.7 0.7 0.7" nodeId="125" materialIds="14,9,4,10" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="transform" nodeId="126">
+          <TransformGroup name="transform" translation="0.00743321 -0.0097 0.032" nodeId="127">
+            <Shape shapeId="4" name="White" translation="-0.0532678 0.003 0" scale="0.4 0.4 0.1" nodeId="128" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="-0.0273653 0.003 0" scale="0.4 0.4 0.1" nodeId="129" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="0 0.003 0" scale="0.4 0.4 0.1" nodeId="130" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="0.0299138 0.003 0" scale="0.4 0.4 0.1" nodeId="131" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="Grill" translation="0.470537 0.652092 2.37408" scale="0.7 0.8 0.8" nodeId="132">
+        <Shape shapeId="3" name="LED Housing" translation="-2.64411e-09 0 0" rotation="0 180 0" scale="0.7 0.7 0.7" nodeId="133" materialIds="14,9,4,10" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="transform" nodeId="134">
+          <TransformGroup name="transform" translation="0.00743321 -0.0097 0.032" nodeId="135">
+            <Shape shapeId="4" name="White" translation="-0.0532678 0.003 0" scale="0.4 0.4 0.1" nodeId="136" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="-0.0273653 0.003 0" scale="0.4 0.4 0.1" nodeId="137" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="0 0.003 0" scale="0.4 0.4 0.1" nodeId="138" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="0.0299138 0.003 0" scale="0.4 0.4 0.1" nodeId="139" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="White LED" translation="-0.454038 0.943125 2.34697" scale="0.7 0.8 0.8" nodeId="140">
+        <Shape shapeId="3" name="LED Housing" translation="-2.64411e-09 0 0" rotation="0 180 0" scale="0.7 0.7 0.7" nodeId="141" materialIds="14,9,4,10" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="transform" nodeId="142">
+          <TransformGroup name="transform" translation="0.00743321 -0.0097 0.032" nodeId="143">
+            <Shape shapeId="4" name="White" translation="-0.0532678 0.003 0" scale="0.4 0.4 0.1" nodeId="144" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="-0.0273653 0.003 0" scale="0.4 0.4 0.1" nodeId="145" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="0 0.003 0" scale="0.4 0.4 0.1" nodeId="146" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="0.0299138 0.003 0" scale="0.4 0.4 0.1" nodeId="147" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="White LED TR" translation="-0.384 1.815 -1.63" rotation="-180 0 0" scale="0.7 0.8 0.8" nodeId="148">
+        <Shape shapeId="3" name="LED Housing" translation="-2.64411e-09 0 0" rotation="0 180 0" scale="0.7 0.7 0.7" nodeId="149" materialIds="14,9,4,10" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="transform" nodeId="150">
+          <TransformGroup name="transform" translation="0.00743321 -0.0097 0.032" nodeId="151">
+            <Shape shapeId="4" name="White" translation="-0.0532678 0.003 0" scale="0.4 0.4 0.1" nodeId="152" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="-0.0273653 0.003 0" scale="0.4 0.4 0.1" nodeId="153" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="0 0.003 0" scale="0.4 0.4 0.1" nodeId="154" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="0.0299138 0.003 0" scale="0.4 0.4 0.1" nodeId="155" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="White LED SL" translation="0.868 1.577 -1.664" rotation="175.909 -16.918 103.81" scale="0.7 0.8 0.8" nodeId="156">
+        <Shape shapeId="3" name="LED Housing" translation="-2.64411e-09 0 0" rotation="0 180 0" scale="0.7 0.7 0.7" nodeId="157" materialIds="14,9,4,10" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="transform" nodeId="158">
+          <TransformGroup name="transform" translation="0.00743321 -0.0097 0.032" nodeId="159">
+            <Shape shapeId="4" name="White" translation="-0.0532678 0.003 0" scale="0.4 0.4 0.1" nodeId="160" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="-0.0273653 0.003 0" scale="0.4 0.4 0.1" nodeId="161" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="0 0.003 0" scale="0.4 0.4 0.1" nodeId="162" materialIds="15" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="White" translation="0.0299138 0.003 0" scale="0.4 0.4 0.1" nodeId="163" materialIds="15" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="lights" nodeId="164">
+      <TransformGroup name="defaultLights" nodeId="165">
+        <TransformGroup name="coronas" translation="0 -0.021904 -0.0762216" nodeId="166">
+          <TransformGroup name="lights" translation="0.027 0.218 -0.036" nodeId="167">
+            <Shape shapeId="5" name="coronaFrontRight" translation="0.793812 0.68881 2.45816" scale="1 1 0.1" clipDistance="200" nodeId="168" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="5" name="coronaFrontRight" translation="0.591191 0.68881 2.47473" scale="1 1 0.1" clipDistance="200" nodeId="169" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="5" name="coronaFrontRight" translation="-0.632583 0.68881 2.47473" scale="1 1 0.1" clipDistance="200" nodeId="170" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="5" name="coronaFrontRight" translation="-0.825446 0.68881 2.47473" scale="1 1 0.1" clipDistance="200" nodeId="171" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="5" name="coronaFrontRight" translation="0.590353 0.498111 2.49727" scale="1 1 0.1" clipDistance="200" nodeId="172" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="5" name="coronaFrontRight" translation="-0.642069 0.498111 2.48006" scale="1 1 0.1" clipDistance="200" nodeId="173" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.989314 0.234935 -1.46788" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="174" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.989314 0.243174 -1.45025" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="175" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.989314 0.253689 -1.46165" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="176" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.989314 0.253689 -1.47618" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="177" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.989314 0.266352 -1.47283" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="178" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.989314 0.266352 -1.46182" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="179" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.989314 0.245811 -1.45285" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="180" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.969626 0.943023 -1.46115" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="181" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.969626 0.943023 -1.44749" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="182" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.967411 0.92337 -1.45719" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="183" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.970842 0.932948 -1.46962" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="184" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.970842 0.916019 -1.46398" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="185" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.970842 0.922869 -1.44986" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="186" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.970842 0.939648 -1.47615" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="187" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.813565 1.5825 -1.46616" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="188" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.813565 1.59922 -1.46616" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="189" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.813565 1.61582 -1.46616" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="190" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.813565 1.62639 -1.46616" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="191" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.813565 1.62639 -1.45872" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="192" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.813565 1.60762 -1.45872" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="193" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.813565 1.5858 -1.45496" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="194" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.813565 1.61385 -1.49155" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="195" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.813565 1.61385 -1.49155" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="196" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.985476 0.311376 -3.85619" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="197" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.985476 0.311376 -3.86954" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="198" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.985476 0.328215 -3.86954" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="199" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.985476 0.328215 -3.85118" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="200" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.985476 0.297219 -3.85563" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="201" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="0.985476 0.297219 -3.87774" rotation="-0 90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="202" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-1.03753 0.322689 -3.86403" rotation="-0 -90 0" scale="0.5 0.5 1" clipDistance="200" nodeId="203" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-1.03753 0.307039 -3.86825" rotation="-90 -5.00307 89.9999" scale="0.5 0.5 1" clipDistance="200" nodeId="204" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-1.03753 0.32476 -3.8667" rotation="-90 -5.00307 89.9999" scale="0.5 0.5 1" clipDistance="200" nodeId="205" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-1.03753 0.325637 -3.87672" rotation="-90 -5.00307 89.9999" scale="0.5 0.5 1" clipDistance="200" nodeId="206" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-1.03753 0.298281 -3.85979" rotation="-90 -5.003 89.9999" scale="0.5 0.5 1" clipDistance="200" nodeId="207" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-1.03952 0.266676 -1.46536" rotation="-90 0 89.9999" scale="0.5 0.5 1" clipDistance="200" nodeId="208" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-1.03952 0.245891 -1.46536" rotation="-90 0 89.9999" scale="0.5 0.5 1" clipDistance="200" nodeId="209" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-1.03952 0.252164 -1.46536" rotation="-90 0 89.9999" scale="0.5 0.5 1" clipDistance="200" nodeId="210" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-1.03952 0.252164 -1.47893" rotation="-90 0 89.9999" scale="0.5 0.5 1" clipDistance="200" nodeId="211" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-1.03952 0.252164 -1.45553" rotation="-90 0 89.9999" scale="0.5 0.5 1" clipDistance="200" nodeId="212" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-1.02458 0.933889 -1.46437" rotation="-90 0 89.9999" scale="0.5 0.5 1" clipDistance="200" nodeId="213" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-1.02458 0.933889 -1.46437" rotation="90 -77.5218 -90.0001" scale="0.5 0.5 1" clipDistance="200" nodeId="214" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-1.02458 0.922324 -1.46693" rotation="90 -77.5218 -90.0001" scale="0.5 0.5 1" clipDistance="200" nodeId="215" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-1.02458 0.924406 -1.47634" rotation="90 -77.5218 -90.0001" scale="0.5 0.5 1" clipDistance="200" nodeId="216" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-1.02458 0.951719 -1.47029" rotation="90 -77.5218 -90.0001" scale="0.5 0.5 1" clipDistance="200" nodeId="217" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-0.865959 1.59381 -1.47029" rotation="90 0 -90.0001" scale="0.5 0.5 1" clipDistance="200" nodeId="218" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-0.865959 1.61179 -1.47029" rotation="90 0 -90.0001" scale="0.5 0.5 1" clipDistance="200" nodeId="219" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-0.865959 1.61759 -1.47029" rotation="90 0 -90.0001" scale="0.5 0.5 1" clipDistance="200" nodeId="220" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-0.865959 1.59677 -1.47029" rotation="90 0 -90.0001" scale="0.5 0.5 1" clipDistance="200" nodeId="221" materialIds="12"/>
+            <Shape shapeId="6" name="coronaWhite4" translation="-0.865959 1.59677 -1.47029" rotation="90 0 -90.0001" scale="0.5 0.5 1" clipDistance="200" nodeId="222" materialIds="12"/>
+          </TransformGroup>
+        </TransformGroup>
+        <Light name="frontLightLow" translation="-2.55713e-08 0.864 2.511" rotation="-15 180 0" clipDistance="75" nodeId="223" type="spot" color="0.85 0.85 1" emitDiffuse="true" emitSpecular="true" decayRate="1" range="20" coneAngle="80" dropOff="3"/>
+        <Light name="highBeamLow" translation="-1.13687e-15 0.864 2.511" rotation="-10 180 0" clipDistance="75" nodeId="224" type="spot" color="0.85 0.85 1" emitDiffuse="true" emitSpecular="true" decayRate="1" range="30" coneAngle="70" dropOff="2"/>
+        <Light name="frontLightHigh" translation="-0.762 0.848 2.43" rotation="165 8 180" clipDistance="75" nodeId="225" type="spot" color="0.85 0.85 1" emitDiffuse="true" emitSpecular="true" decayRate="1" range="25" coneAngle="70" dropOff="3">
+          <Light name="frontLightHigh1" translation="-1.52443 -0.0512831 0.224242" rotation="0 16 0" clipDistance="75" nodeId="226" type="spot" color="0.85 0.85 1" emitDiffuse="true" emitSpecular="true" decayRate="1" range="25" coneAngle="70" dropOff="3"/>
+        </Light>
+        <Light name="highBeamHigh" translation="-0.762 0.848 2.43" rotation="170 5 180" clipDistance="75" nodeId="227" type="spot" color="0.85 0.85 1" emitDiffuse="true" emitSpecular="true" decayRate="1" range="35" coneAngle="50" dropOff="2.5">
+          <Light name="highBeamHigh1" translation="-1.53235 -0.0215471 0.142311" rotation="0 10 0" clipDistance="75" nodeId="228" type="spot" color="0.85 0.85 1" emitDiffuse="true" emitSpecular="true" decayRate="1" range="35" coneAngle="50" dropOff="2.5"/>
+        </Light>
+      </TransformGroup>
+      <TransformGroup name="workLights" nodeId="229"/>
+      <TransformGroup name="backLights" translation="0 0 -1.534" nodeId="230">
+        <TransformGroup name="coronas" nodeId="231">
+          <TransformGroup name="left" nodeId="232">
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.869814 0.799865 -2.62547" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="233" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.851932 0.778486 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="234" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.876233 0.772669 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="235" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.844783 0.758403 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="236" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.868655 0.743768 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="237" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.830263 0.733073 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="238" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.858508 0.724187 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="239" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.82682 0.707203 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="240" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.852778 0.696006 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="241" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.821976 0.686265 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="242" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.829389 0.676111 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="243" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="left2" translation="-0.102 0 -0.024" nodeId="244">
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.869814 0.799865 -2.62547" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="245" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.851932 0.778486 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="246" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.876233 0.772669 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="247" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.844783 0.758403 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="248" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.868655 0.743768 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="249" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.830263 0.733073 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="250" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.858508 0.724187 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="251" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.82682 0.707203 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="252" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.852778 0.696006 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="253" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.821976 0.686265 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="254" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.829389 0.676111 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="255" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="left3" translation="-0.15 1.039 2.5" nodeId="256">
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.869814 0.799865 -2.62547" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="257" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.851932 0.778486 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="258" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.876233 0.772669 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="259" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.844783 0.758403 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="260" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.868655 0.743768 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="261" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.830263 0.733073 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="262" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.858508 0.724187 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="263" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.82682 0.707203 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="264" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.852778 0.696006 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="265" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.821976 0.686265 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="266" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="0.829389 0.676111 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="267" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="right" nodeId="268">
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.87 0.799865 -2.62547" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="269" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.852 0.778486 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="270" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.876 0.772669 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="271" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.845 0.758403 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="272" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.869 0.743768 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="273" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.83 0.733073 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="274" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.859 0.724187 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="275" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.827 0.707203 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="276" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.853 0.696006 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="277" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.822 0.686265 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="278" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.829 0.676111 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="279" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="right2" translation="0.102 0 -0.024" nodeId="280">
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.87 0.799865 -2.62547" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="281" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.852 0.778486 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="282" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.876 0.772669 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="283" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.845 0.758403 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="284" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.869 0.743768 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="285" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.83 0.733073 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="286" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.859 0.724187 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="287" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.827 0.707203 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="288" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.853 0.696006 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="289" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.822 0.686265 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="290" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.829 0.676111 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="291" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="right3" translation="0.15 1.039 2.5" nodeId="292">
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.87 0.799865 -2.62547" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="293" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.852 0.778486 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="294" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.876 0.772669 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="295" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.845 0.758403 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="296" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.869 0.743768 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="297" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.83 0.733073 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="298" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.859 0.724187 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="299" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.827 0.707203 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="300" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.853 0.696006 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="301" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.822 0.686265 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="302" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.829 0.676111 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="303" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-7.98132e-09 0.818405 -2.71677" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="304" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.0890043 0.818405 -2.71677" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="305" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.089 0.818405 -2.71677" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="306" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="2.26992e-07 1.832 -0.12" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="307" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.089 1.832 -0.12" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="308" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.089 1.832 -0.12" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="309" materialIds="13" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <Light name="backLightsHigh" translation="0.806 0.746 -2.62737" rotation="-15 0 0" visibility="false" clipDistance="75" nodeId="310" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" decayRate="1" range="5" coneAngle="110" dropOff="3">
+          <Light name="backLightsHigh1" translation="-1.60081 0 0" clipDistance="75" nodeId="311" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" decayRate="1" range="5" coneAngle="110" dropOff="3"/>
+        </Light>
+      </TransformGroup>
+      <TransformGroup name="turnLights" nodeId="312">
+        <TransformGroup name="turnLeft" nodeId="313">
+          <TransformGroup name="coronas" nodeId="314">
+            <Shape shapeId="8" name="coronaTurnLightLeft2" translation="0.797153 0.708278 2.38269" scale="1.6 1.6 1" clipDistance="200" nodeId="315" materialIds="7" castsShadows="true" receiveShadows="true"/>
+            <TransformGroup name="left" translation="0 0 -1.536" nodeId="316">
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.87 0.8 -2.625" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="317" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.852 0.778 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="318" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.876 0.773 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="319" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.845 0.758 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="320" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.869 0.744 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="321" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.83 0.733 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="322" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.859 0.724 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="323" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.827 0.707 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="324" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.853 0.696 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="325" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.822 0.686 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="326" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.829 0.676 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="327" materialIds="13"/>
+            </TransformGroup>
+            <TransformGroup name="left" translation="-0.100108 0 -1.56487" nodeId="328">
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.87 0.8 -2.625" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="329" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.852 0.778 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="330" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.876 0.773 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="331" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.845 0.758 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="332" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.869 0.744 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="333" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.83 0.733 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="334" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.859 0.724 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="335" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.827 0.707 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="336" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.853 0.696 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="337" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.822 0.686 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="338" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.829 0.676 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="339" materialIds="13"/>
+            </TransformGroup>
+            <TransformGroup name="left" translation="-0.150635 1.03714 0.965724" nodeId="340">
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.87 0.8 -2.625" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="341" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.852 0.778 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="342" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.876 0.773 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="343" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.845 0.758 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="344" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.869 0.744 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="345" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.83 0.733 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="346" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.859 0.724 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="347" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.827 0.707 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="348" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.853 0.696 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="349" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.822 0.686 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="350" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="0.829 0.676 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="351" materialIds="13"/>
+            </TransformGroup>
+            <Shape shapeId="10" name="Turn" translation="0.47406 1.0925 0.523828" rotation="-90 -0 -90" scale="0.8 0.8 0.8" nodeId="352" materialIds="5" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <Light name="turnLightLeftFront" translation="0.98 0.843 2.258" rotation="0 185 0" clipDistance="75" nodeId="353" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" decayRate="1" range="4" coneAngle="140" dropOff="3"/>
+          <Light name="turnLightLeftBack" translation="0.802 0.728 -4.159" rotation="-8 -5 0" clipDistance="75" nodeId="354" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" decayRate="1" range="4" coneAngle="140" dropOff="3"/>
+        </TransformGroup>
+        <TransformGroup name="turnRight" nodeId="355">
+          <TransformGroup name="coronas" nodeId="356">
+            <Shape shapeId="8" name="coronaTurnLightLeft2" translation="-0.80229 0.703417 2.37149" scale="1.6 1.6 1" clipDistance="200" nodeId="357" materialIds="7" castsShadows="true" receiveShadows="true"/>
+            <TransformGroup name="left" translation="0 0 -1.536" nodeId="358">
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.87 0.8 -2.625" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="359" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.852 0.778 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="360" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.876 0.773 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="361" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.845 0.758 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="362" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.869 0.744 -2.631" rotation="180 0 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="363" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.83 0.733 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="364" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.859 0.724 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="365" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.827 0.707 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="366" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.853 0.696 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="367" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.822 0.686 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="368" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.829 0.676 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="369" materialIds="13"/>
+            </TransformGroup>
+            <TransformGroup name="left" translation="0.1 0 -1.56487" nodeId="370">
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.87 0.8 -2.625" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="371" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.852 0.778 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="372" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.876 0.773 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="373" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.845 0.758 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="374" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.869 0.744 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="375" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.83 0.733 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="376" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.859 0.724 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="377" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.827 0.707 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="378" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.853 0.696 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="379" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.822 0.686 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="380" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.829 0.676 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="381" materialIds="13"/>
+            </TransformGroup>
+            <TransformGroup name="left" translation="0.151 1.03714 0.965724" nodeId="382">
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.87 0.8 -2.625" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="383" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.852 0.778 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="384" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.876 0.773 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="385" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.845 0.758 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="386" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.869 0.744 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="387" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.83 0.733 -2.631" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="388" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.859 0.724 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="389" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.827 0.707 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="390" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.853 0.696 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="391" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.822 0.686 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="392" materialIds="13"/>
+              <Shape shapeId="9" name="coronaTurnLightLeft3" translation="-0.829 0.676 -2.635" rotation="180 -9.74158e-30 -90" scale="0.5 0.5 1" clipDistance="200" nodeId="393" materialIds="13"/>
+            </TransformGroup>
+            <Shape shapeId="10" name="Turn" translation="0.325956 1.09239 0.523459" rotation="-90 0 90" scale="0.8 0.8 0.8" nodeId="394" materialIds="5" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <Light name="turnLightRightFront" translation="-0.98 0.843 2.258" rotation="0 185 0" clipDistance="75" nodeId="395" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" decayRate="1" range="4" coneAngle="140" dropOff="3"/>
+          <Light name="turnLightRightBack" translation="-0.802 0.728 -4.159" rotation="-8 5 0" clipDistance="75" nodeId="396" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" decayRate="1" range="4" coneAngle="140" dropOff="3"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="brakeLights" translation="0 0 -1.534" nodeId="397">
+        <TransformGroup name="left" nodeId="398">
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.869814 0.799865 -2.62547" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="399" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.851932 0.778486 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="400" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.876233 0.772669 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="401" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.844783 0.758403 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="402" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.868655 0.743768 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="403" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.830263 0.733073 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="404" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.858508 0.724187 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="405" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.82682 0.707203 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="406" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.852778 0.696006 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="407" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.821976 0.686265 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="408" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.829389 0.676111 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="409" materialIds="13" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="left2" translation="-0.102 0 -0.024" nodeId="410">
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.869814 0.799865 -2.62547" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="411" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.851932 0.778486 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="412" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.876233 0.772669 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="413" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.844783 0.758403 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="414" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.868655 0.743768 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="415" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.830263 0.733073 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="416" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.858508 0.724187 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="417" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.82682 0.707203 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="418" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.852778 0.696006 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="419" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.821976 0.686265 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="420" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.829389 0.676111 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="421" materialIds="13" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="left3" translation="-0.15 1.039 2.5" nodeId="422">
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.869814 0.799865 -2.62547" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="423" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.851932 0.778486 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="424" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.876233 0.772669 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="425" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.844783 0.758403 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="426" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.868655 0.743768 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="427" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.830263 0.733073 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="428" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.858508 0.724187 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="429" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.82682 0.707203 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="430" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.852778 0.696006 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="431" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.821976 0.686265 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="432" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="0.829389 0.676111 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="433" materialIds="13" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="right" nodeId="434">
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.87 0.799865 -2.62547" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="435" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.852 0.778486 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="436" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.876 0.772669 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="437" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.845 0.758403 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="438" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.869 0.743768 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="439" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.83 0.733073 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="440" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.859 0.724187 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="441" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.827 0.707203 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="442" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.853 0.696006 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="443" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.822 0.686265 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="444" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.829 0.676111 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="445" materialIds="13" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="right2" translation="0.102 0 -0.024" nodeId="446">
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.87 0.799865 -2.62547" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="447" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.852 0.778486 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="448" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.876 0.772669 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="449" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.845 0.758403 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="450" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.869 0.743768 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="451" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.83 0.733073 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="452" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.859 0.724187 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="453" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.827 0.707203 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="454" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.853 0.696006 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="455" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.822 0.686265 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="456" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.829 0.676111 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="457" materialIds="13" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="right3" translation="0.15 1.039 2.5" nodeId="458">
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.87 0.799865 -2.62547" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="459" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.852 0.778486 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="460" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.876 0.772669 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="461" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.845 0.758403 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="462" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.869 0.743768 -2.63077" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="463" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.83 0.733073 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="464" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.859 0.724187 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="465" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.827 0.707203 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="466" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.853 0.696006 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="467" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.822 0.686265 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="468" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="coronaBrakeLeft" translation="-0.829 0.676111 -2.63451" rotation="0 180 0" scale="0.3 0.3 1" clipDistance="200" nodeId="469" materialIds="13" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <Light name="backLightsHigh" translation="0.802241 0.729959 -2.62378" rotation="-21.1518 0 0" clipDistance="75" nodeId="470" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" decayRate="1" range="2.5" coneAngle="110" dropOff="2">
+          <Light name="backLightsHigh1" translation="-1.59845 0 0" clipDistance="75" nodeId="471" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" decayRate="1" range="2.5" coneAngle="110" dropOff="2"/>
+        </Light>
+      </TransformGroup>
+      <TransformGroup name="beaconLights" nodeId="472"/>
+      <TransformGroup name="reverseLights" nodeId="473">
+        <TransformGroup name="coronas" nodeId="474">
+          <TransformGroup name="left" nodeId="475">
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.623428 0.67482 -4.21107" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="476" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.669481 0.800034 -4.20315" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="477" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.647908 0.782 -4.20504" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="478" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.676935 0.773154 -4.2025" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="479" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.636765 0.755993 -4.21349" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="480" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.665851 0.746734 -4.21095" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="481" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.627886 0.728755 -4.214" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="482" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.656676 0.719506 -4.208" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="483" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.61582 0.703633 -4.21157" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="484" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.64708 0.693806 -4.20927" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="485" materialIds="11" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="right" nodeId="486">
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.623 0.67482 -4.21107" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="487" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.669 0.800034 -4.20315" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="488" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.643388 0.782084 -4.20661" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="489" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.677 0.773154 -4.2025" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="490" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.637 0.755993 -4.21349" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="491" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.666 0.746734 -4.21095" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="492" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.628 0.728755 -4.214" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="493" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.657 0.719506 -4.208" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="494" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.616 0.703633 -4.21157" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="495" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.647 0.693806 -4.20927" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="496" materialIds="11" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="leftup" translation="-0.061 1.038 2.54047" nodeId="497">
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.623428 0.67482 -4.21107" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="498" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.669481 0.800034 -4.20315" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="499" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.647908 0.782 -4.20504" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="500" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.676935 0.773154 -4.2025" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="501" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.636765 0.755993 -4.21349" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="502" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.665851 0.746734 -4.21095" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="503" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.627886 0.728755 -4.214" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="504" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.656676 0.719506 -4.208" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="505" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.61582 0.703633 -4.21157" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="506" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="0.64708 0.693806 -4.20927" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="507" materialIds="11" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="rightup" translation="0.061 1.038 2.54204" nodeId="508">
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.623 0.67482 -4.21107" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="509" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.669 0.800034 -4.20315" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="510" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.643388 0.782084 -4.20661" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="511" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.677 0.773154 -4.2025" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="512" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.637 0.755993 -4.21349" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="513" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.666 0.746734 -4.21095" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="514" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.628 0.728755 -4.214" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="515" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.657 0.719506 -4.208" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="516" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.616 0.703633 -4.21157" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="517" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="coronaBackLeft1" translation="-0.647 0.693806 -4.20927" rotation="0 175 0" scale="0.3 0.3 1" clipDistance="200" nodeId="518" materialIds="11" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+        <Light name="reverseLight" translation="0 0.80904 -4.242" rotation="-8.16392 -0 0" clipDistance="75" nodeId="519" type="spot" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" decayRate="1" range="5" coneAngle="150" dropOff="3"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>
